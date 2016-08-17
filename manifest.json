@@ -1,0 +1,22 @@
+{
+    "manifest_version":2,
+    "name":"Youtube Looper",
+    "description":"Youtube Video Loop,Loop Button is added",
+    "version":"1.0",
+    "author":"Akshay Raul",
+    "short_name":"YtLooper",
+    "content_scripts":[
+        {
+            "run_at":"document_end",
+            "matches":["https://www.youtube.com/*","http://www.youtube.com/*"],
+            "js":["ytlooper.js","jquery.js"]
+        }
+    ],
+    "background": {
+    "persistent" : false,
+    "scripts" : ["back.js"]
+  },
+  "permissions" : [
+    "tabs", "nativeMessaging", "https://www.youtube.com/*"
+  ]
+}
